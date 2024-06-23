@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: nvjpeg
+Version: 0.1.0
+Summary: Python interface for nvjpeg. Encode/Decode Jpeg with Nvidia GPU Hardware Acceleration.
+Home-page: https://github.com/jonggkwan/nvjpeg-python
+Author: JK
+Author-email: skekdnzm1994@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/jonggkwan/nvjpeg-python
+Project-URL: Tracker, https://github.com/jonggkwan/nvjpeg-python/issues
+Keywords: pynvjpeg,nvjpeg,jpeg,jpg,encode,decode,jpg encode,jpg decode,jpeg encode,jpeg decode,gpu,nvidia
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pybind11
+
+NvJpeg - Python
+---------------------------
+
+## Require
+* nvjpeg
+* cuda >= 10.2
+* numpy >= 1.7
+* python >= 3.6
+* gcc >= 7.5
+* make >= 4.1
+
+## System
+* Linux
+* Windows
+* Nvidia Jetson OS
+
+## Install
+```shell
+pip install pynvjpeg
+```
+
+## Usage
+
+### 0. Init PyNvJpeg
+```python
+from nvjpeg import NvJpeg
+nj = NvJpeg()
+```
+
+### 1. Use PyNvJpeg
+
+#### Read Jpeg File to Numpy
+```python
+img = nj.read("_JPEG_FILE_PATH_")
+# like cv2.imread("_JPEG_FILE_PATH_")
+```
+
+#### Write Numpy to Jpeg File
+```python
+nj.write("_JPEG_FILE_PATH_", img)
+# or nj.write("_JPEG_FILE_PATH_", quality)
+# int quality default 70, mean jpeg quality
+# like cv2.imwrite("_JPEG_FILE_PATH_", img)
+```
+
+#### Decode Jpeg bytes in variable
+```python
+img = nj.decode(jpeg_bytes)
+# like cv2.imdecode(variable)
+```
+
+#### Encode image numpy array to bytes
+```python
+jpeg_bytes = nj.encode(img)
+# or with jpeg quality
+# jpeg_bytes = nj.encode(img, 70)
+# int quality default 70, mean jpeg quality
+
+# like cv2.imencode(".jpg", variable)[1]
+```

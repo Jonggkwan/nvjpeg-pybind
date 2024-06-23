@@ -1,0 +1,11 @@
+out
+.vscode
+*.pyc
+dist
+build
+pynvjpeg.egg-info
+pynvjpeg
+MANIFEST
+__pycache__
+venv
+.idea
