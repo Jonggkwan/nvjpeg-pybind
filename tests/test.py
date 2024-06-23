@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 
-import glob
 import os
-import sys
 
 import cv2
-
-for lib in glob.glob(os.path.abspath(os.path.join(os.path.dirname(__file__), "../build/lib.*"))):
-    sys.path.append(lib)
 
 from nvjpeg import NvJpeg
 
