@@ -16,7 +16,7 @@ This project is based on the [nvjpeg-python](https://github.com/UsingNet/nvjpeg-
 ## Installation
 
 ```shell
-pip install .
+pip install git+https://github.com/jonggkwan/nvjpeg-pybind.git
 ```
 
 ## Usage
