@@ -1,4 +1,4 @@
-# NvJpeg - Python
+# NvJpeg - pybind11
 
 This project is based on the [nvjpeg-python](https://github.com/UsingNet/nvjpeg-python) repository. It has been extended to use `pybind11` to create Python bindings for the `nvjpeg` library, allowing for efficient JPEG encoding and decoding using Nvidia's GPU acceleration.
 
