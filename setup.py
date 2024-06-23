@@ -10,7 +10,7 @@ module_name = "nvjpeg"
 
 cuda_include = os.path.join(os.environ["CUDA_PATH"], "include")
 cuda_lib = os.path.join(os.environ["CUDA_PATH"], "lib", "x64" if platform.machine().endswith("64") else "Win32")
-nvjpeg_sources = ["nvjpeg-python.cpp", "src/x86/JpegCoder.cpp"]
+nvjpeg_sources = ["src/nvjpeg-python.cpp", "src/x86/JpegCoder.cpp"]
 nvjpeg_include_dirs = ["include", numpy.get_include(), cuda_include]
 nvjpeg_library_dirs = [cuda_lib]
 nvjpeg_libraries = ["cudart", "nvjpeg"]
