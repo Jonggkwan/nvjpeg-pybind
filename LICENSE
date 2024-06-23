@@ -22,6 +22,6 @@ SOFTWARE.
 
 ---
 
-Modifications made by [JK] (c) 2023
+Modifications made by [JK] (c) 2024
 
 This project is based on the original nvjpeg-python repository (https://github.com/UsingNet/nvjpeg-python) and has been extended to use pybind11 to create Python bindings for the nvjpeg library.
