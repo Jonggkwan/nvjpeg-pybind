@@ -8,6 +8,7 @@ This project is based on the [nvjpeg-python](https://github.com/UsingNet/nvjpeg-
 - numpy
 - Python >= 3.6
 - Visual Studio with C++ desktop development tools
+- pybind11
 
 ## Supported System
 
