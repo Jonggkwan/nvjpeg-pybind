@@ -38,13 +38,12 @@ Source = "https://github.com/jonggkwan/nvjpeg-python"
 Tracker = "https://github.com/jonggkwan/nvjpeg-python/issues"
 
 [tool.setuptools]
-packages = ["find:"]
+include-package-data = true
+zip-safe = false
 
 [tool.setuptools.package-data]
 nvjpeg = ["*.pyi", "*.pyd"]
 
-[tool.setuptools.include-package-data]
-include = true
-
-[tool.setuptools.zip-safe]
-zip_safe = false
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nvjpeg"]

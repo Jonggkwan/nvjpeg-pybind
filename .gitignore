@@ -3,7 +3,7 @@ out
 *.pyc
 dist
 build
-pynvjpeg.egg-info
+nvjpeg.egg-info
 pynvjpeg
 MANIFEST
 __pycache__
